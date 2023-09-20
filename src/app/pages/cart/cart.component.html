@@ -1,0 +1,47 @@
+<div class="main">
+    <div class="container-fluid">
+      <div class="nav">
+        <app-navbar></app-navbar>
+      </div>
+    </div>
+    <div *ngFor="let item of cartItems" class="container mt-5 pt-5">
+      <div class="card mb-3" style="max-width: 540px">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img [src]="item.image" class="img-fluid rounded-start" alt="..." />
+          </div>
+          <div class="col-md-7">
+            <div class="card-body">
+              <h5 class="card-title">{{item.title}}</h5>
+              <p class="card-text">
+                {{item.price}}$
+              </p>     
+            </div>
+          </div>
+        <div class="col-md-1 plus-minus d-flex flex-column justify-content-end">
+            
+            <!-- <div><i class="bi bi-plus-square-fill " ></i></div> -->
+            <div><i class="bi bi-dash-square-fill btn" (click)="removeItem(item.id)"></i></div>
+            
+          </div>
+        </div>
+
+      </div>
+    </div>
+      <div  ng-if="item.price" class="container mt-5 pt-5">
+        <div class="card text-center">
+          <div class="card-header">
+            total checkout amount
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Total Amount + 18% GST</h5>
+            <p class="card-text">{{grossAmount}}</p>
+            <a class="btn btn-outline-info" (click)="YouerOderPlaced()">Pay Now!!</a>
+          </div>
+          <div class="card-footer text-muted">
+           Terms and Conditions Applay
+          </div>
+        </div>
+      </div>
+  </div>
+  

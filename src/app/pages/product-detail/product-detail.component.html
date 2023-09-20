@@ -1,0 +1,31 @@
+<div class="main">
+  <div class="container-fluid">
+    <div class="nav">
+      <app-navbar></app-navbar>
+    </div>
+  </div>
+  <div *ngFor="let item of cartItems" class="container mt-5 pt-5">
+    <div class="card mb-3" style="max-width: 1000px">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img [src]="item.image" class="img-fluid rounded-start" alt="..." />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">{{item.title}}</h5>
+            <p class="card-text">
+              {{item.description}}
+            </p>
+            <p class="card-text">
+              <small class="text-muted">{{item.price}}$</small>
+            </p>
+            <!-- <div class="">
+              <a  class="btn btn-primary" (click)="addToCart(product)"> Add to Cart  <i class="bi bi-cart"></i></a>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <app-footer></app-footer> -->
+</div>

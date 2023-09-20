@@ -1,0 +1,133 @@
+<div class="d-flex container-fluid">
+    <div class="aaa">
+      <div class="singup-container">
+        <div class="d-flex justify-content-center align-self-center">
+          <h2>SignUp</h2>
+        </div>
+        <form [formGroup]="signUp">
+          <div class="mb-3 position1">
+            <label for="FirstName" class="form-label">First Name*</label>
+            <input
+              type="text"
+              class="form-control"
+              id="FirstName"
+              formControlName="firstname"
+              placeholder="eg:- ram"
+            />
+            <div
+              *ngIf="
+                signUp.get('firstname')?.hasError('required') &&
+                signUp.get('firstname')?.touched
+              "
+              class="text-danger position2"
+            >
+              First Name is Required.
+            </div>
+            <div
+              *ngIf="
+                signUp.get('firstname')?.hasError('minlength') &&
+                signUp.get('firstname')?.touched
+              "
+              class="text-danger position2"
+            >
+              Name should be minimum 2 character.
+            </div>
+          </div>
+          <div class="mb-3 position1">
+            <label for="lastName" class="form-label">last Name*</label>
+            <input
+              type="text"
+              class="form-control"
+              id="lastName"
+              formControlName="lastname"
+              placeholder="eg:- kumar"
+            />
+            <div
+              *ngIf="
+                signUp.get('lastname')?.hasError('required') &&
+                signUp.get('lastname')?.touched
+              "
+              class="text-danger position2"
+            >
+              last Name is Required.
+            </div>
+            <div
+              *ngIf="
+                signUp.get('lastname')?.hasError('minlength') &&
+                signUp.get('lastname')?.touched
+              "
+              class="text-danger position2"
+            >
+              Name should be minimum 2 character.
+            </div>
+          </div>
+          <div class="mb-3 position1">
+            <label for="email" class="form-label">Email address*</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              formControlName="email"
+              placeholder="eg:- ramKumar@g.com"
+            />
+            <div
+              *ngIf="
+                signUp.get('email')?.hasError('required') &&
+                signUp.get('email')?.touched
+              "
+              class="text-danger position2"
+            >
+              Email address is Required.
+            </div>
+          </div>
+          <div class="mb-3 position1">
+            <label for="password" class="form-label">Password*</label>
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              formControlName="password"
+            />
+            <div
+              *ngIf="
+                signUp.get('password')?.hasError('required') &&
+                signUp.get('password')?.touched
+              "
+              class="text-danger position2"
+            >
+              Password is Required.
+            </div>
+            <div
+              *ngIf="
+                signUp.get('password')?.hasError('minlength') &&
+                signUp.get('password')?.touched
+              "
+              class="text-danger position2"
+            >
+              Password Should be minimum 8 length.
+            </div>
+            <div
+              *ngIf="
+                signUp.get('password')?.hasError('maxlength') &&
+                signUp.get('password')?.touched
+              "
+              class="text-danger position2"
+            >
+              Password Should be maximum 16 length.
+            </div>
+          </div>
+          <div class="d-flex justify-content-center pt-4">
+            <button
+              type="submit"
+              class="btn w-100"
+              (click)="signupDone()"
+              [disabled]="!signUp.valid"
+            >
+              SignUp
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  

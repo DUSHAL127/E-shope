@@ -1,0 +1,25 @@
+
+ 
+    <div class="card ">
+        <img [src]="product.image" class="card-img-top " alt="..." >
+        <div class="card-body">
+            
+            <h5 class="card-title">{{product.title}} </h5>
+          <p class="card-text">{{product.description}}</p>
+           <div class="d-flex justify-content-between justify-content-center ">
+
+
+            <div class="price">
+              {{product.price}} $
+            </div>
+            <div class="">
+              <a  class="btn btn-primary" (click)="addToCart(product)"> Add to Cart  <i class="bi bi-cart"></i></a>
+            </div>
+            <div class="">
+              <i class="bi bi-heart btn btn-light"></i>
+            </div>
+             
+           </div>
+        </div>
+      </div>
+  

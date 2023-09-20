@@ -1,0 +1,24 @@
+.img-fluid {
+    width: 80%;
+    height: 100px;
+    object-fit: cover;
+    object-position: top;
+}
+.card-text {
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 0; 
+}
+.card-title {
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+.price {
+    display: block;
+    align-self: center;
+}

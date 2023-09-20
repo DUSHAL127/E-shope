@@ -1,0 +1,45 @@
+.container-fluid {
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(87,87,140,1) 35%, rgba(0,212,255,1) 100%);
+}
+.singup-container {
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+h2{
+    color: rgb(69, 116, 202);
+    margin-top: -70px;
+}
+.aaa{
+    background-color: white;
+    padding: 100px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.btn {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(87,87,140,1) 35%, rgba(0,212,255,1) 100%);
+    color: white;
+}
+.position {
+    position: block;
+}
+
+.position1{
+    position:relative
+}
+
+.position2{
+    position: absolute;
+    top: 67px
+}
